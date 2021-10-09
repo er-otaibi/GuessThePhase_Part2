@@ -101,11 +101,12 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-
+           myRV.adapter?.notifyDataSetChanged()
             if (str == myPhase) {
                 myList.add("yes you have the guessing word! $myPhase")
                 phaseText.text = "Phrase: $myPhase \n Guessed letter:  "
             }
+            myRV.adapter?.notifyDataSetChanged()
         }
 
     fun save() {
